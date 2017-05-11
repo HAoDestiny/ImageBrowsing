@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.ll_image_content).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //传入一个list
+                Toast.makeText(MainActivity.this, "List", Toast.LENGTH_SHORT).show();
                 ImagPagerUtil imagPagerUtil = new ImagPagerUtil(MainActivity.this, picList);
                 imagPagerUtil.setContentText(content);
                 imagPagerUtil.show();
